@@ -1,0 +1,41 @@
+.product-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  background-color: #000000cc;
+  color: white;
+  font-family: 'Crimson Text';
+
+  font-size: 1.2rem;
+}
+.product-overlay__top {
+  margin: 34px 155px 42px 15px;
+  width: 80%;
+  h2 {
+    font-weight: normal;
+  }
+  h3 {
+    font-weight: normal;
+  }
+}
+
+.product-overlay__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 42px 17px 32px;
+  button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  h3 {
+    font-weight: normal;
+  }
+}

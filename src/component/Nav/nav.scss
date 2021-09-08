@@ -1,0 +1,38 @@
+.main-header {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  z-index: 100;
+  background-color: white;
+}
+.main-header__title {
+  margin-left: 2.5rem;
+  font-style: normal;
+
+  text-align: left;
+
+  width: 255px;
+  height: 79px;
+  display: flex;
+  align-items: center;
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+}
+@media (max-width: 480px) {
+
+  .main-header__title {
+    margin-left: 1rem;
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.body-section {
+  display: flex;
+  position: relative;
+  top: 81px;
+  flex-direction: column;
+}
+.animation{
+  position:fixed;
+  top:81px;
+  z-index:100;
+  width: 40vw;
+  height: calc(100vh - 81px);
+  right: 0;
+}

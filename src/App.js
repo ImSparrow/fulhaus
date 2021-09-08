@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Titlepage from "./component/Intro/Titlepage";
+import Navbar from "./component/Nav/Navbar";
+import Shop from "./component/Shop/Shop";
+import { useSelector } from "react-redux";
+import Cart from "./component/Cart/Cart";
+import { motion, AnimatePresence } from "framer-motion";
+import "./App.scss";
 function App() {
+  const cartDisplay = useSelector((state) => state.cart.display);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <AnimatePresence>
+        {cartDisplay && (
+          <motion.div
+            className="animation"
+            initial={{ x: "100vw" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100vw" }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            <Cart></Cart>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <div className="body-section">
+        <Titlepage></Titlepage>
+        <Shop></Shop>
+      </div>
+    </>
   );
 }
 

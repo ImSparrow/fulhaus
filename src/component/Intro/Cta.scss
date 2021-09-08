@@ -1,0 +1,41 @@
+.CTA-container {
+  background-color: #003941;
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.CTA-title {
+  margin-bottom: 0.3rem;
+  h1 {
+    color: white;
+    font-family: "Crimson Text";
+    font-weight: 400;
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .CTA-title {
+    margin-bottom: 0rem;
+    h1 {
+      color: white;
+      font-family: "Crimson Text";
+      font-weight: 400;
+      font-size: 3.5rem;
+    }
+  }
+}
+@media only screen and (max-width: 700) and (min-width: 481px) {
+  .CTA-title {
+    margin-bottom: 0rem;
+    h1 {
+      color: white;
+      font-family: "Crimson Text";
+      font-weight: 400;
+      font-size: 3rem;
+    }
+  }
+}
